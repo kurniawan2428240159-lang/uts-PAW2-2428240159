@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const c = require('../controllers/kosmetikControllers');
+const c = require('../controllers/ponselController');
 const cekApiKey = require('../middlewares/cekApiKey');
 
 router.put('/:id', cekApiKey, c.update);

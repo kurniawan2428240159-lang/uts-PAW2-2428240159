@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const merekController = require('../controllers/merekControllers');
+const merekponselController = require('../controllers/merekponselController');
 
-router.get('/', merekController.getAll);
-router.post('/', merekController.create);
+router.get('/', merekponselController.getAll);
+router.post('/', merekponselController.create);
 
 module.exports = router;
