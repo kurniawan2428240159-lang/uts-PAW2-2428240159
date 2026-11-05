@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const merekponselController = require('../controllers/merekponselController');
+const merekponselController = require('../controllers/merekponselControllers');
 
 router.get('/', merekponselController.getAll);
 router.post('/', merekponselController.create);

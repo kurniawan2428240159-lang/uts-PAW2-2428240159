@@ -1,4 +1,4 @@
-const PonselModel = require('../models/ponselModel');
+const PonselModel = require('../models/ponselModels');
 const { errorHttp } = require('../middlewares/errorHandler');
 
 exports.update = async (req, res) => {

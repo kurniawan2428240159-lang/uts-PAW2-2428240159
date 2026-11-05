@@ -7,8 +7,8 @@ const logger = require('./middlewares/logger');
 const { notFoundHandler, errorHandler } = require('./middlewares/errorHandler');
 
 // Impor rute sesuai topik tugas (kosmetik & merek)
-const ponselRoutes = require('./routes/ponselroute');
-const merekponselRoutes = require('./routes/merekponselRoute');
+const ponselRoutes = require('./routes/ponselRoutes');
+const merekponselRoutes = require('./routes/merekponselRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -35,7 +35,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 // ---------- Koneksi Database MongoDB ----------
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.DB_URI)
   .then(() => {
     console.log('Terhubung ke MongoDB');
     app.listen(PORT, () => console.log(`Server berjalan di http://localhost:${PORT}`));

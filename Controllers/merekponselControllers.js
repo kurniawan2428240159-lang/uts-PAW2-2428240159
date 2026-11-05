@@ -1,4 +1,4 @@
-const Merekponsel = require('../models/merekponselModel');
+const Merekponsel = require('../models/merekponselModels');
 
 exports.create = async (req, res) => {
   try {
