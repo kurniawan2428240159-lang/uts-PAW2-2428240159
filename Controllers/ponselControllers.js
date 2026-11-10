@@ -19,7 +19,7 @@ exports.remove = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    const ponsel = await KosmetikModel.create(req.body);
+    const ponsel = await PonselModel.create(req.body);
     res.status(201).json(ponsel);
   } catch (err) {
     res.status(400).json({ message: err.message });
